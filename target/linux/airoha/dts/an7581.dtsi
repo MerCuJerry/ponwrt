@@ -1168,5 +1168,16 @@
 				};
 			};
 		};
+
+		pcm: pcm@1fbd0000 {
+			compatible = "airoha,an7581-pcm";
+			reg = <0x0 0x1fbd0000 0x0 0x4fff>;
+
+			interrupts = <GIC_SPI 27 IRQ_TYPE_LEVEL_HIGH>;
+			resets = <&scuclk EN7581_PCM1_RST>;
+			reset-names = "pcm1";
+
+			status = "disabled";
+		};
 	};
 };
